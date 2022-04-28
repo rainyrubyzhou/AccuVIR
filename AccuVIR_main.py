@@ -1,4 +1,4 @@
-#call beam search on Ebola graph and others(based on real data)
+#run Diverse Beam Search and Branched Sampling on a reads set.
 import sys
 import time
 import os
