@@ -50,10 +50,6 @@ Successfull installation will  end with version number using above commands.
 	--beamwidth | <int, e.g. 100>
 	Beamwidth for diverse beam search (default: 500).
 
-	-o | <str>
-	Output file name. 
-	[Default] AccuVIR_<draft_file_name>.fasta in the working directory.
-
 	-v | Print the version number.
  	-h | Print the usage. 
 ```
