@@ -1,0 +1,208 @@
+Number of initial candidate nodes:  281
+actual changes: 103
+second round sites: 11 [9730, 10232, 9771, 10269, 9813, 9918, 10304, 9969, 9970, 10027, 10340]
+new thres: 0.05
+(6333, 6334) [9969, 6318, 6319] 9759
+(6333, 6334) [9969, 10272, 10273] 9761
+(6342, 6344) [9970, 9971, 6326, 6327] 9761
+(6342, 6344) [9970, 10247, 9971, 6326] 9762
+Number of initial candidate nodes:  276
+actual changes: 103
+second round sites: 10 [9730, 10232, 9771, 10269, 9813, 9918, 10304, 9969, 9970, 10340]
+new thres: 0.055
+(6333, 6334) [9969, 6318, 6319] 9759
+(6333, 6334) [9969, 10272, 10273] 9761
+(6342, 6344) [9970, 9971, 6326, 6327] 9761
+(6342, 6344) [9970, 10247, 9971, 6326] 9762
+Number of initial candidate nodes:  249
+actual changes: 94
+second round sites: 7 [9730, 10232, 10269, 9918, 10304, 9969, 9970]
+new thres: 0.060000000000000005
+(6333, 6334) [9969, 6318, 6319] 9753
+(6333, 6334) [9969, 10272, 10273] 9755
+(6342, 6344) [9970, 9971, 6326, 6327] 9755
+(6342, 6344) [9970, 10247, 9971, 6326] 9756
+Number of initial candidate nodes:  246
+actual changes: 94
+second round sites: 7 [9730, 10232, 10269, 9918, 10304, 9969, 9970]
+new thres: 0.065
+(6333, 6334) [9969, 6318, 6319] 9753
+(6333, 6334) [9969, 10272, 10273] 9755
+(6342, 6344) [9970, 9971, 6326, 6327] 9755
+(6342, 6344) [9970, 10247, 9971, 6326] 9756
+Number of initial candidate nodes:  217
+actual changes: 81
+second round sites: 6 [9730, 10232, 10269, 10304, 9969, 9970]
+new thres: 0.07
+(6330, 6331) [9969, 6318, 6319] 9746
+(6330, 6331) [9969, 10272, 10273] 9748
+(6339, 6341) [9970, 9971, 6326, 6327] 9748
+(6339, 6341) [9970, 10247, 9971, 6326] 9749
+Number of initial candidate nodes:  207
+actual changes: 79
+second round sites: 5 [10232, 10269, 10304, 9969, 9970]
+new thres: 0.07500000000000001
+(6327, 6328) [9969, 6318, 6319] 9743
+(6327, 6328) [9969, 10272, 10273] 9745
+(6336, 6338) [9970, 9971, 6326, 6327] 9745
+(6336, 6338) [9970, 10247, 9971, 6326] 9746
+Number of initial candidate nodes:  189
+actual changes: 72
+second round sites: 4 [10269, 10304, 9969, 9970]
+new thres: 0.08
+(6328, 6329) [9969, 6318, 6319] 9742
+(6328, 6329) [9969, 10272, 10273] 9744
+(6337, 6339) [9970, 9971, 6326, 6327] 9744
+(6337, 6339) [9970, 10247, 9971, 6326] 9745
+Number of initial candidate nodes:  178
+actual changes: 66
+second round sites: 4 [10269, 10304, 9969, 9970]
+new thres: 0.085
+(6328, 6329) [9969, 6318, 6319] 9742
+(6328, 6329) [9969, 10272, 10273] 9744
+(6337, 6339) [9970, 9971, 6326, 6327] 9744
+(6337, 6339) [9970, 10247, 9971, 6326] 9745
+Number of initial candidate nodes:  174
+actual changes: 64
+second round sites: 4 [10269, 10304, 9969, 9970]
+new thres: 0.09
+(6328, 6329) [9969, 6318, 6319] 9741
+(6328, 6329) [9969, 10272, 10273] 9743
+(6337, 6339) [9970, 9971, 6326, 6327] 9743
+(6337, 6339) [9970, 10247, 9971, 6326] 9744
+Number of initial candidate nodes:  163
+actual changes: 60
+second round sites: 3 [10269, 10304, 9970]
+new thres: 0.095
+(6333, 6335) [9970, 9971, 6326, 6327] 9738
+(6333, 6335) [9970, 10247, 9971, 6326] 9739
+Number of initial candidate nodes:  157
+actual changes: 59
+second round sites: 3 [10269, 10304, 9970]
+new thres: 0.1
+(6333, 6335) [9970, 9971, 6326, 6327] 9738
+(6333, 6335) [9970, 10247, 9971, 6326] 9739
+Number of initial candidate nodes:  145
+actual changes: 53
+second round sites: 3 [10269, 10304, 9970]
+new thres: 0.10500000000000001
+(6332, 6334) [9970, 9971, 6326, 6327] 9735
+(6332, 6334) [9970, 10247, 9971, 6326] 9736
+Number of initial candidate nodes:  142
+actual changes: 51
+second round sites: 3 [10269, 10304, 9970]
+new thres: 0.11
+(6331, 6333) [9970, 9971, 6326, 6327] 9735
+(6331, 6333) [9970, 10247, 9971, 6326] 9736
+Number of initial candidate nodes:  139
+actual changes: 50
+second round sites: 2 [10269, 10304]
+new thres: 0.115
+Number of initial candidate nodes:  136
+actual changes: 49
+second round sites: 2 [10269, 10304]
+new thres: 0.12000000000000001
+Number of initial candidate nodes:  126
+actual changes: 46
+second round sites: 2 [10269, 10304]
+new thres: 0.125
+Number of initial candidate nodes:  124
+actual changes: 46
+second round sites: 2 [10269, 10304]
+new thres: 0.13
+Number of initial candidate nodes:  122
+actual changes: 45
+second round sites: 2 [10269, 10304]
+new thres: 0.135
+Number of initial candidate nodes:  116
+actual changes: 41
+second round sites: 2 [10269, 10304]
+new thres: 0.14
+Number of initial candidate nodes:  110
+actual changes: 41
+second round sites: 2 [10269, 10304]
+new thres: 0.14500000000000002
+Number of initial candidate nodes:  107
+actual changes: 39
+second round sites: 2 [10269, 10304]
+new thres: 0.15000000000000002
+Number of initial candidate nodes:  104
+actual changes: 37
+second round sites: 2 [10269, 10304]
+new thres: 0.155
+Number of initial candidate nodes:  101
+actual changes: 36
+second round sites: 2 [10269, 10304]
+new thres: 0.16
+Number of initial candidate nodes:  99
+actual changes: 35
+second round sites: 2 [10269, 10304]
+new thres: 0.165
+Number of initial candidate nodes:  90
+actual changes: 30
+second round sites: 1 [10269]
+new thres: 0.16999999999999998
+Number of initial candidate nodes:  88
+actual changes: 29
+second round sites: 1 [10269]
+new thres: 0.175
+Number of initial candidate nodes:  88
+actual changes: 29
+second round sites: 1 [10269]
+new thres: 0.18
+Number of initial candidate nodes:  85
+actual changes: 28
+second round sites: 1 [10269]
+new thres: 0.185
+Number of initial candidate nodes:  82
+actual changes: 27
+second round sites: 1 [10269]
+new thres: 0.19
+Number of initial candidate nodes:  77
+actual changes: 24
+second round sites: 1 [10269]
+new thres: 0.195
+Number of initial candidate nodes:  74
+actual changes: 23
+second round sites: 1 [10269]
+new thres: 0.2
+Number of initial candidate nodes:  69
+actual changes: 21
+second round sites: 1 [10269]
+new thres: 0.20500000000000002
+Number of initial candidate nodes:  65
+actual changes: 21
+second round sites: 1 [10269]
+new thres: 0.21000000000000002
+Number of initial candidate nodes:  62
+actual changes: 20
+second round sites: 0 []
+new thres: 0.21500000000000002
+Number of initial candidate nodes:  59
+actual changes: 19
+second round sites: 0 []
+new thres: 0.22000000000000003
+Number of initial candidate nodes:  55
+actual changes: 16
+second round sites: 0 []
+new thres: 0.22500000000000003
+Number of initial candidate nodes:  43
+actual changes: 4
+second round sites: 0 []
+new thres: 0.22999999999999998
+Number of initial candidate nodes:  40
+actual changes: 4
+second round sites: 0 []
+new thres: 0.235
+Number of initial candidate nodes:  36
+actual changes: 1
+second round sites: 0 []
+new thres: 0.24
+Number of initial candidate nodes:  32
+actual changes: 1
+second round sites: 0 []
+new thres: 0.245
+Number of initial candidate nodes:  1
+actual changes: 1
+second round sites: 0 []
+new thres: 0.25
