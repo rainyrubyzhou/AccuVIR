@@ -28,9 +28,9 @@ CmakeLists is provided in the project root folder.
 
 #### Installation
 ```console
-  git clone --recursive https://github.com/rainyrubyzhou/AccuVIR AccuVIR
-  cd AccuVIR/src
-  python AccuVIR_main.py -h
+git clone --recursive https://github.com/rainyrubyzhou/AccuVIR AccuVIR
+cd AccuVIR/src
+python AccuVIR_main.py -h
 ```
 Successfull installation will end with usage information using above commands.
 
@@ -39,29 +39,30 @@ Successfull installation will end with usage information using above commands.
 
 >**Usage:**
 ```console
-  python AccuVIR_main.py <args>
+python AccuVIR_main.py <args>
 ```
 
 >**Mandatory args:**
 ```console
-	-r | <str, e.g. "raw_HIV.fasta">
-	Reads file for graph construction(in fasta format). 
+-r | <str, e.g. "raw_HIV.fasta">
+Reads file for graph construction(in fasta format). 
 
-	-b | <str, e.g. "canu_contig.fasta">
-	Backbone sequence file for graph construction (in fasta format). 
+-b | <str, e.g. "canu_contig.fasta">
+Backbone sequence file for graph construction (in fasta format). 
 ```
 >**Optional args:**
 ```console
-	--beamwidth | <int, e.g. 100>
-	Beamwidth for diverse beam search (default: 500).
+--beamwidth | <int, e.g. 100>
+Beamwidth for diverse beam search (default: 500).
 
- 	-h | Print the usage information. 
+-h | Print the usage information. 
 ```
 
 >**Output Results:** 
-+ 
-+
-`AccuVIR_X.fa` will be created in the working directory where <X> is the name of the draft file. 
+
+Outputs will be created in the input file directory.
++ `X_ON_Y_filtered.fa` is the intermediate output before MRR. It containing outputs from both DBS and path sampling modules.  
+<X> is the name of the reads file and <Y> is the backbone sequence. 
 
 ## Contact
 Other than raising issues on Github, you can also contact YU Runzhou (runzhouyu2-c@my.cityu.edu.hk) for help in installation/usage or any other related query.
