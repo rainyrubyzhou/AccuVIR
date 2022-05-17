@@ -1,7 +1,7 @@
 # AccuVIR: Accurate viral genome polisher using long reads
 =======================================================================
 
-**AccuVIR**--a **Acc**urate **VIR**al genome polisher-- utilizes path searching and sampling in sequence alignment graphs to polish long reads assembly of viral genomes. 
+**AccuVIR**--an **Acc**urate **VIR**al genome polisher-- utilizes path searching and sampling in sequence alignment graphs to polish long reads assembly of viral genomes. 
 
 AccuVIR requires the following as input:
 + Reads file for graph construction (Optimized for third generateion sequencing data).
@@ -36,8 +36,9 @@ Successfull installation will end with usage information using above commands.
 
 
 ## Usage of the AccuVIR: 
+### Step 1: Paths generation using two modules.
 
->**Usage:**
+>**Command Usage:**
 ```console
 python AccuVIR_main.py <args>
 ```
@@ -59,11 +60,33 @@ Beamwidth for diverse beam search (default: 500).
 ```
 
 >**Output Results:** 
++ `X_ON_Y_filtered.fa` is the intermediate output before MRR. It contains multiple sequences from both DBS and path sampling modules.  
 
-Outputs will be created in the input file directory.
-+ `X_ON_Y_filtered.fa` is the intermediate output before MRR. It containing outputs from both DBS and path sampling modules.  
+    `X` is the name of the reads file and `Y` is the backbone sequence. Outputs will be created in the input file directory. 
 
-`X` is the name of the reads file and `Y` is the backbone sequence. 
+### Step 2: Apply gene prediction tool (Genemark recommended)
+
+Due to license requirement of Genemark, users need to install the tool or run it online (http://exon.gatech.edu/GeneMark/) in this step. 
+
+`.gtf` output file is required for next step. (e.g. `X_ON_Y_filtered.fa.gtf`)
+
+
+>**Example usage of Genemark:**
+```console
+gmhmmp -m heu_11.mod -f G -o X_ON_Y_filtered.fa.gtf X_ON_Y_filtered.fa
+```
+### Step 3: Call ranking module for final output.
+Pass in the `X_ON_Y_filtered.fa` 
+>**Command Usage:**
+```console
+python AccuVIR_MRR.py -r X_ON_Y_filtered.fa
+```
+>**Output Results:** 
+
+ + `**_final.fa` is final output of AccuVIR. It contains the single sequence that ranks best using MRR. 
+
+    Users can also pass this sequence as the backbone to step 1 to iteratively refine the output. 
+
 
 ## Contact
 Other than raising issues on Github, you can also contact YU Runzhou (runzhouyu2-c@my.cityu.edu.hk) for help in installation/usage or any other related query.
