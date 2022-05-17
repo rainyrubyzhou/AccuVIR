@@ -29,33 +29,39 @@ CmakeLists is provided in the project root folder.
 #### Installation
 ```console
   git clone --recursive https://github.com/rainyrubyzhou/AccuVIR AccuVIR
-  cd AccuVIR
-  python python AccuVIR_main.py -v 
+  cd AccuVIR/src
+  python AccuVIR_main.py -h
 ```
-Successfull installation will  end with version number using above commands.
+Successfull installation will end with usage information using above commands.
 
 
 ## Usage of the AccuVIR: 
-```console
- Usage: python AccuVIR_main.py <args>
 
- ** Mandatory args: 
+>**Usage:**
+```console
+  python AccuVIR_main.py <args>
+```
+
+>**Mandatory args:**
+```console
 	-r | <str, e.g. "raw_HIV.fasta">
 	Reads file for graph construction(in fasta format). 
 
 	-b | <str, e.g. "canu_contig.fasta">
 	Backbone sequence file for graph construction (in fasta format). 
-
-** Optional args:
+```
+>**Optional args:**
+```console
 	--beamwidth | <int, e.g. 100>
 	Beamwidth for diverse beam search (default: 500).
 
-	-v | Print the version number.
- 	-h | Print the usage. 
+ 	-h | Print the usage information. 
 ```
 
-### Output Results
-If no `--output` (or `-o`) is provided, `AccuVIR_X.fasta` will be created in the working directory where <X> is the name of the draft file. 
+>**Output Results:** 
++ 
++
+`AccuVIR_X.fa` will be created in the working directory where <X> is the name of the draft file. 
 
 ## Contact
 Other than raising issues on Github, you can also contact YU Runzhou (runzhouyu2-c@my.cityu.edu.hk) for help in installation/usage or any other related query.
