@@ -32,8 +32,8 @@ def stat(gtf_f):
 
 def gtf2csv(gtf_f):
     GM_df, GM_stat_df = stat(gtf_f)
-    GM_df.to_csv(gtf_f + ".csv")
-    GM_stat_df.to_csv(gtf_f + "stat.csv")
+    #GM_df.to_csv(gtf_f + ".csv")
+    #GM_stat_df.to_csv(gtf_f + "stat.csv")
     return GM_stat_df
 
 #"/home/runzhouyu2/work/aligngraph-master/data/2_geno_mix/mix_6/grouped_beam_50.gtf"
