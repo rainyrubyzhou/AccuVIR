@@ -1,4 +1,4 @@
-# AccuVIR: Accurate viral enome long reads polisher
+# AccuVIR: Accurate viral genome polisher using long reads
 =======================================================================
 
 **AccuVIR**--a **Acc**urate **VIR**al genome polisher-- utilizes path searching and sampling in sequence alignment graphs to polish long reads assembly of viral genomes. 
