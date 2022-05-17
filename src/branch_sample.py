@@ -51,7 +51,7 @@ def assert_candi(nx_g, thres, node):
             flag = True #this is a candidate node of given threshold
     return flag
 
-def test_candi_homo(nx_graph, thres, homo_df):
+def test_candi_homo(nx_graph, thres, homo_df, topo_list):
     candi_loc = count_branch(nx_graph, thres)
     res = [] 
     for nd in candi_loc:
@@ -60,7 +60,7 @@ def test_candi_homo(nx_graph, thres, homo_df):
                 topo_list.index(nd) >= topo_list.index(row['homo_begin']):
                 res.append((nd, row))
                 break
-    #print("# candi :", len(res))
+    #print("# candi :", len(res)) #number of candidate nodes
     #print(res[0:10])
     #return res
 #test_candi_homo(nx_graph, 0.35, homo_df) #check how many candidate nodes are in detected homopolyer region
