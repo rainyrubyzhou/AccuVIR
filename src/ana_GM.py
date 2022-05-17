@@ -1,7 +1,10 @@
-# analyse the GM result and output the features for MRR.
+#################################################################################$$
+# Author: Runzhou
+# Function: 
+# Analyse the GM results and output the features for MRR.
+#################################################################################$$
 import sys
-sys.path.append("..")
-from ana_res import pp_utils
+import pp_utils
 import pandas as pd
 from matplotlib import pyplot as plt
 
@@ -28,10 +31,11 @@ def stat(gtf_f):
     return df, stat_df
 
 def gtf2csv(gtf_f):
-    df, stat_df = stat(gtf_f)
-    df.to_csv(gtf_f + ".csv")
-    stat_df.to_csv(gtf_f + "stat.csv")
+    GM_df, GM_stat_df = stat(gtf_f)
+    GM_df.to_csv(gtf_f + ".csv")
+    GM_stat_df.to_csv(gtf_f + "stat.csv")
+    return GM_stat_df
 
 #"/home/runzhouyu2/work/aligngraph-master/data/2_geno_mix/mix_6/grouped_beam_50.gtf"
-gtf_f = sys.argv[1]
-gtf2csv(gtf_f)
+#gtf_f = sys.argv[1]
+#gtf2csv(gtf_f)
