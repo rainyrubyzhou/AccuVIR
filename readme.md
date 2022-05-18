@@ -9,7 +9,7 @@ AccuVIR requires the following as input:
  
 ## Installation
 
-### Option_1: Conda Package Installation
+### Option 1: Conda Package Installation
 The convenient way of installation is using the conda package as follows:
 ```console
 conda install -c bioconda AccuVIR
@@ -18,8 +18,7 @@ conda activate AccuVIR
 conda install -c bioconda AccuVIR
 ```
 
-### Option_2: Installation from the source
-CmakeLists is provided in the project root folder. 
+### Option 2: Install from source
 
 #### Dependencies
 - Conda
@@ -66,7 +65,7 @@ Beamwidth for diverse beam search (default: 500).
 
 ### Step 2: Apply gene prediction tool (Genemark recommended)
 
-Due to license requirement of Genemark, users need to install the tool or run it online (http://exon.gatech.edu/GeneMark/) in this step. 
+Due to the license requirement of Genemark tools, users need to preinstall the tool or run it online (http://exon.gatech.edu/GeneMark/) in this step. 
 
 `.gtf` output file is required for next step. (e.g. `X_ON_Y_filtered.fa.gtf`)
 
@@ -76,7 +75,7 @@ Due to license requirement of Genemark, users need to install the tool or run it
 gmhmmp -m heu_11.mod -f G -o X_ON_Y_filtered.fa.gtf X_ON_Y_filtered.fa
 ```
 ### Step 3: Call ranking module for final output.
-Pass in the `X_ON_Y_filtered.fa` 
+Pass in the `X_ON_Y_filtered.fa` and the sequence of greatest MRR value will be output.
 >**Command Usage:**
 ```console
 python AccuVIR_MRR.py -r X_ON_Y_filtered.fa
