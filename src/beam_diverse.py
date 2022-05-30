@@ -9,7 +9,7 @@ import random
 import beam_utils
 from networkx.algorithms.smetric import s_metric
 from BeamSearchTree import BeamSearchTreeNode
-assert("bioinfo" == os.environ['CONDA_DEFAULT_ENV'])
+#assert("bioinfo" == os.environ['CONDA_DEFAULT_ENV'])
 sys.path.append("..")
 import networkx as nx
 import numpy as np
