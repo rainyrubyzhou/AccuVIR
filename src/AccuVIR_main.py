@@ -47,7 +47,9 @@ if __name__ == '__main__':
     DBS.Grouped_beam(nx_pack[0], BeamWidth, graph_out_pref + "_DBS_" + str(BeamWidth) + ".fa")
     
     #locate all homopolymer regions
+    print("Scaning homopolymer regions...")
     utils.nx_homo(nx_pack[0], graph_out_pref + "_homo_loc.csv")
+    print("Branched sampling...")
     BS.sample(nx_pack[0], graph_out_pref, graph_out_pref + "_sampling.fa")
     
     # merge the output of two modules and filter out short ones for intermediate output(mainly from DBS).

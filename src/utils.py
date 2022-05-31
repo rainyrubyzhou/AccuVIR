@@ -4,7 +4,8 @@
 # Graph building related utils are from pgdagcon's repo.
 #################################################################################$$
 from math import log, sqrt
-import os, numpy as np
+import os
+import pandas as pd
 import aligngraph
 from aligngraph import convert_mismatches, AlnGraph
 import networkx as nx
@@ -121,11 +122,8 @@ def nx_homo(nx_g, out_f):
                     break
             homo_loc.append((homo_begin, homo_end, homo_char, homo_len))
     #print("homopolymer regions:", len(homo_loc),"\n", homo_loc)    
-    from matplotlib import pyplot as plt
-    import pandas as pd
     homo_df = pd.DataFrame(homo_loc, columns = ['homo_begin', 'homo_end', 'homo_char', 'homo_len'])
-    homo_df.hist('homo_len')
-    plt.show()
+    
     homo_df.to_csv(out_f)
 
     return homo_df

@@ -1,6 +1,6 @@
 import sys
 import os
-assert("bioinfo" == os.environ['CONDA_DEFAULT_ENV'])
+#assert("bioinfo" == os.environ['CONDA_DEFAULT_ENV'])
 import time
 import random
 import networkx as nx

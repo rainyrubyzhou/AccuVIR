@@ -16,7 +16,7 @@ def gen_path_in_tree(tree, leaf_l, k = 1):
         yield path
         # no need to return when using yield
     time_2 = time.time()
-    print("Constructing paths and generate sequences: %s s"%(time_2 - time_1))
+    #print("Constructing paths and generate sequences: %s s"%(time_2 - time_1))
 
 def trunc_best_k(trunc_array, k):
     # input: a numpy array;  k to be selected
