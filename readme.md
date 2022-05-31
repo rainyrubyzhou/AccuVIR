@@ -23,6 +23,7 @@ conda install -c bioconda AccuVIR
 #### Dependencies
 - Conda
 - python
+- blasr (https://anaconda.org/bioconda/blasr)
 - Required python package: Biopython>=1.70, networkx >= 2.5.1, pandas >= 1.1.3
 
 #### Installation
