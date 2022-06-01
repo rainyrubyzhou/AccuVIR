@@ -16,11 +16,14 @@ from Bio import SeqIO
 if __name__ == '__main__':
     #parse args
     parser = argparse.ArgumentParser()
-    parser.add_argument('-r', type=str, required=True, help = "Reads output for further ranking(in fasta format).")
+    parser.add_argument('-r', type=str, required=True, help = "Reads output for further ranking (in fasta format).")
+    parser.add_argument('-o', type=str, required=False, help = "Output file for the best ranked sequence.")
     #parser.add_argument('--GM', type=str, required=False, help = "Beamwidth for diverse beam search (default: 500).")
     args = parser.parse_args()
     reads = args.r
     GM_file = reads + ".gtf"
+    print(GM_file)
+    #final_out_file = args.o
     final_out_file = reads + "_final.fa"
     GM_stat_df = ana_GM.gtf2csv(GM_file)
     GM_stat_df['seq_len'] = None
@@ -37,17 +40,26 @@ if __name__ == '__main__':
     GM_stat_df['rank_2'] = GM_stat_df['n_frag'].rank(method = 'dense', ascending = True)
     GM_stat_df['rank_3'] = GM_stat_df['max_score'].rank(method = 'dense', ascending = False)
     GM_stat_df['rank_4'] = GM_stat_df['sum_score'].rank(method = 'dense', ascending = False)
+    """
     GM_stat_df['MRR_value'] = (1/GM_stat_df['rank_1'] + 1/GM_stat_df['rank_2'] + \
                         1/GM_stat_df['rank_3'] + 1/GM_stat_df['rank_4'])/4
+    """
+    GM_stat_df['MRR_value'] = (1/GM_stat_df['rank_1'] + 1/GM_stat_df['rank_2'] + \
+                        2 * (1/GM_stat_df['rank_3']) + 4 * (1/GM_stat_df['rank_4']))/4
+    
     GM_stat_df['rank_MRR'] = GM_stat_df['MRR_value'].rank(method = 'dense', ascending = False)
-    GM_stat_df.to_csv( GM_file + "_MRR.csv")    
+    GM_stat_df.to_csv( GM_file + "_MRR_weighted.csv")    
     best_seq_id = GM_stat_df.loc[GM_stat_df['rank_MRR'] == 1, 'seqid'].values
     print(best_seq_id, " ranks best.")
     
     for record in seq_list:
         #assign the sequence length column.
-        if record.description == best_seq_id: 
-            SeqIO.write(record, final_out_file, "fasta")
+        if len(best_seq_id) < 2:
+            if record.description == best_seq_id: 
+                SeqIO.write(record, final_out_file, "fasta")
+        else:
+            if record.description in best_seq_id: 
+                SeqIO.write(record, final_out_file, "fasta")
             
 
     

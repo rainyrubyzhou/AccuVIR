@@ -36,6 +36,6 @@ def gtf2csv(gtf_f):
     #GM_stat_df.to_csv(gtf_f + "stat.csv")
     return GM_stat_df
 
-#"/home/runzhouyu2/work/aligngraph-master/data/2_geno_mix/mix_6/grouped_beam_50.gtf"
-#gtf_f = sys.argv[1]
-#gtf2csv(gtf_f)
+if __name__ == "__main__":
+    gtf_f = sys.argv[1]
+    gtf2csv(gtf_f)
