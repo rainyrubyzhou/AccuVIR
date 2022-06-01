@@ -23,7 +23,7 @@ conda install -c bioconda AccuVIR
 #### Dependencies
 - Conda
 - python
-- blasr (https://anaconda.org/bioconda/blasr)
+- [blasr](https://anaconda.org/bioconda/blasr)
 - Required python package: Biopython>=1.70, networkx >= 2.5.1, pandas >= 1.1.3
 
 #### Installation
@@ -66,7 +66,7 @@ Beamwidth for diverse beam search (default: 500).
 
 ### Step 2: Apply gene prediction tool (Genemark recommended)
 
-Due to the license requirement of Genemark tools, users need to preinstall the tool or run it online (http://exon.gatech.edu/GeneMark/) in this step. 
+Due to the license requirement of [Genemark](http://exon.gatech.edu/GeneMark/) tools, users need to preinstall the tool or run it [online](http://exon.gatech.edu/GeneMark/) in this step. 
 
 `.gtf` output file is required for next step. (e.g. `X_ON_Y_filtered.fa.gtf`)
 
