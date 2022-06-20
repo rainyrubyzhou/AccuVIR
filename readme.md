@@ -9,17 +9,6 @@ AccuVIR requires the following as input:
  
 ## Installation
 
-### Option 1: Conda Package Installation
-The convenient way of installation is using the conda package as follows:
-```console
-conda install -c bioconda AccuVIR
-conda create --name AccuVIR
-conda activate AccuVIR 
-conda install -c bioconda AccuVIR
-```
-
-### Option 2: Install from source
-
 #### Dependencies
 - Conda
 - python
