@@ -13,7 +13,7 @@ AccuVIR requires the following as input:
 - Conda
 - python
 - [blasr](https://anaconda.org/bioconda/blasr)
-- Required python package: Biopython>=1.70, networkx >= 2.5.1, pandas >= 1.1.3
+- Required python package: Biopython>=1.70, networkx >= 2.5.1, pandas >= 1.1.3, seaborn >= 0.11.1
 
 #### Installation
 ```console
@@ -55,12 +55,13 @@ Beamwidth for diverse beam search (default: 500).
 
 ### Step 2: Apply gene prediction tool (Genemark recommended)
 
-Due to the license requirement of [Genemark](http://exon.gatech.edu/GeneMark/) tools, users need to preinstall the tool or run it [online](http://exon.gatech.edu/GeneMark/gmhmmp.cgi) in this step (GeneMark.hmm recommended).   
+Due to the license requirement of [Genemark](http://exon.gatech.edu/GeneMark/) tools, users need to preinstall the tool or run it [online](http://exon.gatech.edu/GeneMark/gmhmmp.cgi) in this step.   
+For offline running, we use the version 'GeneMark.hmm for prokaryotes'. Users need to download 'GeneMarkS' at [this page](http://exon.gatech.edu/GeneMark/license_download.cgi).
 
 `.gtf` output file is required for next step. (e.g. `X_ON_Y_filtered.fa.gtf`)
 
 
->**Example usage of Genemark:**
+>**Example usage of Genemark (GeneMark.hmm for prokaryotes in this example):**
 ```console
 gmhmmp -m heu_11.mod -f G -o X_ON_Y_filtered.fa.gtf X_ON_Y_filtered.fa
 ```
@@ -77,7 +78,11 @@ python AccuVIR_MRR.py -r X_ON_Y_filtered.fa
     Users can also pass this sequence as the backbone to step 1 to iteratively refine the output. 
 
 ## Data availability
-Simulated datasets used in our experimentd are available at [here](https://drive.google.com/drive/folders/1jIIBaANO5Gi0EeECuxq_7IHYScds4dDB).
+Users can test our tool using the test data [here](https://drive.google.com/drive/folders/1iCNVjkw_LEhd8pYfS4QDXEAmVAHZW2N9).
+`python AccuVIR_main.py -r test_reads.fa -b backbone.fa` 
+`ref.fa` is the ground truth for this dataset.
+
+Simulated datasets used in our experimentd are available [here](https://drive.google.com/drive/folders/1jIIBaANO5Gi0EeECuxq_7IHYScds4dDB).
 ## Contact
 Other than raising issues on Github, you can also contact YU Runzhou (runzhouyu2-c@my.cityu.edu.hk) for help in installation/usage or any other related query.
 
