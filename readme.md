@@ -55,7 +55,7 @@ Beamwidth for diverse beam search (default: 500).
 
 ### Step 2: Apply gene prediction tool (Genemark recommended)
 
-Due to the license requirement of [Genemark](http://exon.gatech.edu/GeneMark/) tools, users need to preinstall the tool or run it [online](http://exon.gatech.edu/GeneMark/) in this step. 
+Due to the license requirement of [Genemark](http://exon.gatech.edu/GeneMark/) tools, users need to preinstall the tool or run it [online](http://exon.gatech.edu/GeneMark/gmhmmp.cgi) in this step (GeneMark.hmm recommended).   
 
 `.gtf` output file is required for next step. (e.g. `X_ON_Y_filtered.fa.gtf`)
 
@@ -76,7 +76,8 @@ python AccuVIR_MRR.py -r X_ON_Y_filtered.fa
 
     Users can also pass this sequence as the backbone to step 1 to iteratively refine the output. 
 
-
+## Data availability
+Simulated datasets used in our experimentd are available at [here](https://drive.google.com/drive/folders/1jIIBaANO5Gi0EeECuxq_7IHYScds4dDB).
 ## Contact
 Other than raising issues on Github, you can also contact YU Runzhou (runzhouyu2-c@my.cityu.edu.hk) for help in installation/usage or any other related query.
 
