@@ -44,22 +44,20 @@ if __name__ == '__main__':
     GM_stat_df['MRR_value'] = (1/GM_stat_df['rank_1'] + 1/GM_stat_df['rank_2'] + \
                         1/GM_stat_df['rank_3'] + 1/GM_stat_df['rank_4'])/4
     """
-    GM_stat_df['MRR_value'] = (1/GM_stat_df['rank_1'] + 1/GM_stat_df['rank_2'] + \
-                        2 * (1/GM_stat_df['rank_3']) + 4 * (1/GM_stat_df['rank_4']))/4
+    GM_stat_df['MRR_value'] = (1/GM_stat_df['rank_1'] + 2*(1/GM_stat_df['rank_2']) + \
+                         (1/GM_stat_df['rank_3']) + (1/GM_stat_df['rank_4']))/4
     
     GM_stat_df['rank_MRR'] = GM_stat_df['MRR_value'].rank(method = 'dense', ascending = False)
     GM_stat_df.to_csv( GM_file + "_MRR_weighted.csv")    
     best_seq_id = GM_stat_df.loc[GM_stat_df['rank_MRR'] == 1, 'seqid'].values
     print(best_seq_id, " ranks best.")
     
+    best_records = []
     for record in seq_list:
-        #assign the sequence length column.
-        if len(best_seq_id) < 2:
-            if record.description == best_seq_id: 
-                SeqIO.write(record, final_out_file, "fasta")
-        else:
-            if record.description in best_seq_id: 
-                SeqIO.write(record, final_out_file, "fasta")
+        if record.description in best_seq_id: 
+            best_records.append(record)
+    SeqIO.write(best_records, final_out_file, "fasta")
+
             
 
     
