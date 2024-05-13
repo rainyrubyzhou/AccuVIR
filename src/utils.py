@@ -426,3 +426,43 @@ def merge_filter(dbs_file, samp_file, filter_file):
     SeqIO.write(filtered_seqs, filter_file, "fasta")
 
     return
+
+def merge(dbs_file, samp_file, merge_file):
+    import shutil
+    with open(merge_file,'w') as merge_f:
+        for f in [dbs_file, samp_file]:
+            with open(f,'r') as fd:
+                shutil.copyfileobj(fd, merge_f)
+
+def get_median_length(sequences):
+    lengths = [len(seq) for seq in sequences]
+    sorted_lengths = sorted(lengths)
+    mid = len(sorted_lengths) // 2
+    if len(sorted_lengths) % 2 == 0:
+        median_length = (sorted_lengths[mid - 1] + sorted_lengths[mid]) / 2.0
+    else:
+        median_length = sorted_lengths[mid]
+    return median_length
+
+def extract_median(input_file, output_file):
+    sequences = list(SeqIO.parse(input_file, 'fasta'))
+    median_length = get_median_length(sequences)
+    sequences_with_median_length = [seq for seq in sequences if len(seq) == median_length]
+    print("Median_length of DBS results:", median_length, "# sequences of median length: ", len(sequences_with_median_length))
+    with open(output_file, 'w') as f:
+        SeqIO.write(sequences_with_median_length[0], f, 'fasta')
+
+def get_longest_length(sequences):
+    lengths = [len(seq) for seq in sequences]
+    sorted_lengths = sorted(lengths)
+    longest_length = sorted_lengths[-1]
+    return longest_length
+
+def extract_longest(input_file, output_file):
+    sequences = list(SeqIO.parse(input_file, 'fasta'))
+    longest_length = get_longest_length(sequences)
+    sequences_with_longest_length = [seq for seq in sequences if len(seq) == longest_length]
+    print("Longest_length of DBS results:", longest_length, "# sequences of longest length: ", len(sequences_with_longest_length))
+    with open(output_file, 'w') as f:
+        SeqIO.write(sequences_with_longest_length[0], f, 'fasta')    
+    
