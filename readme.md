@@ -4,7 +4,7 @@
 **AccuVIR**--an **Acc**urate **VIR**al genome assembler and polisher -- utilizes path searching and sampling in sequence alignment graphs to assemble or polish draft assembly of viral genomes. Users are welcome to read our published paper at Bioinformatics [here](https://doi.org/10.1093/bioinformatics/btac827) and try our tool as guided below.
 
 AccuVIR requires the following as input:
-+ Reads file for graph construction (Optimized for third-generation sequencing data).
++ Error corrected reads file from Canu for graph construction (Optimized for third-generation sequencing data).
 + Backbone sequence file for graph construction (Can be either draft assembly from assembly tools including Canu/Shasta/Flye etc, or an available genome of another viral subtype/haplotype).
  
 ## Installation
