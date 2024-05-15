@@ -73,6 +73,6 @@ if __name__ == '__main__':
         # merge the output of two modules and filter out short ones for intermediate output(mainly from DBS).
         #utils.merge_filter(graph_out_pref + "_DBS_" + str(BeamWidth) + ".fa", graph_out_pref + "_sampling.fa", graph_out_pref + "_filtered.fa")
         utils.merge_filter(graph_out_pref + "_DBS" + ".fa", graph_out_pref + "_sampling.fa", graph_out_pref + "_merge.fa")
-        utils.extract_longest(graph_out_pref + "_merge" + ".fa", graph_out_pref + "_merge" + "_longest.fa")
+        # utils.extract_longest(graph_out_pref + "_merge" + ".fa", graph_out_pref + "_merge" + "_longest.fa")
     
     
