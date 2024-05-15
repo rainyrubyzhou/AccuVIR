@@ -49,7 +49,7 @@ Beamwidth for diverse beam search (default: 500).
 Select mode for the path searching (default: 3): '1' for diverse beam search; '2' for branched sampling; '3' for both search module.
 
 -p | <str, e.g. accuvir>
-Preifx (default: accuvir).
+Preifx of the output file name (default: accuvir).
 
 -o | <str, e.g., result>
 Output folder (default: result).
