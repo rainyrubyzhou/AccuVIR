@@ -97,7 +97,9 @@ python AccuVIR_MRR.py -r prefix_merge.fa
 ## Data availability
 Users can test our tool using the test data [here](https://drive.google.com/drive/folders/1iCNVjkw_LEhd8pYfS4QDXEAmVAHZW2N9). `ref.fa` is the ground truth for this dataset.
 ```console
-python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p test -o result
+python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p test -o result -m 1
+
+python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p test -o result -m 3
 
 gmhmmp -m heu_11.mod -f G -o result/test_merge.fa.gtf result/test_merge.fa
 
