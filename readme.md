@@ -80,14 +80,14 @@ gmhmmp -m heu_11.mod -f G -o prefix_merge.fa.gtf prefix_merge.fa
 
 
 ### Step 3: Call ranking module for final output.
-Pass in the `X_ON_Y_filtered.fa` and the sequence of greatest MRR value will be output.
+Pass in the `prefix_merge.fa` and the sequence of greatest MRR value will be output.
 >**Command Usage:**
 ```console
-python AccuVIR_MRR.py -r X_ON_Y_filtered.fa
+python AccuVIR_MRR.py -r prefix_merge.fa
 ```
 >**Output Results:** 
 
- + `**_final.fa` is final output of AccuVIR. It contains the single sequence that ranks best using MRR. 
+ + `prefix_final_result.fa` is final output of AccuVIR. It contains the single sequence that ranks best using MRR. 
 
     Users can also pass this sequence as the backbone to step 1 to iteratively refine the output. 
 
