@@ -124,6 +124,13 @@ python AccuVIR_MRR.py -r result/prefix_merge.fa
 
 ```
 
+To obtain error-corrected reads by applying Canu to the original reads, you can refer to the following example:
+
+```console
+canu -p prefix -d output_folder genomeSize=10k -nanopore raw_reads.fastq useGrid=false
+
+```
+
 
 Simulated datasets used in our experimentd are available [here](https://drive.google.com/drive/folders/1jIIBaANO5Gi0EeECuxq_7IHYScds4dDB).
 ## Contact
