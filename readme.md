@@ -46,7 +46,7 @@ Backbone sequence file for graph construction (in fasta format).
 Beamwidth for diverse beam search (default: 500).
 
 -m | <int, e.g., 3>
-Select mode for the path searching (default: 3): '1' for diverse beam search (DBS); '2' for branched sampling; '3' for both search module.
+Select mode for the path searching (default: 3): '1' for diverse beam search (DBS); '2' for branched sampling; '3' for both search modules.
 
 -p | <str, e.g. accuvir>
 Preifx of the output file name (default: accuvir).
