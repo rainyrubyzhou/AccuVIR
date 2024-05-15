@@ -65,8 +65,18 @@ Output folder (default: result).
 
 -h | Print the usage information. 
 ```
+>**Example Command:**
+```console
+python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p prefix -o output_folder -m 1
 
->**Output Results:** 
+python AccuVIR_main.py -r test_reads.fa -b prefix_DBS_longest.fa -p prefix -o output_folder -m 3
+
+```
+
+
+>**Output Results:**
++ `prefix_DBS_longest.fa` is the output of the first substep. It contains a path with the longest length from the DBS searching module.  
+
 + `prefix_merge.fa` is the intermediate output before MRR. It contains multiple sequences from both DBS and path sampling modules.  
 
     Outputs will be created in the input file directory. 
