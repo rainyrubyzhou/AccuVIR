@@ -51,9 +51,9 @@ if __name__ == '__main__':
     if mode == 1:
         print("Running mode: only DBS")
         print("Running DBS of beam width: ", BeamWidth)
-        DBS.Grouped_beam(nx_pack[0], BeamWidth, graph_out_pref + "_DBS_" + str(BeamWidth) + ".fa")
+        DBS.Grouped_beam(nx_pack[0], BeamWidth, graph_out_pref + "_DBS" + ".fa")
         
-        utils.extract_longest(graph_out_pref + "_DBS_" + str(BeamWidth) + ".fa", graph_out_pref + "_DBS_" + str(BeamWidth) + "_longest.fa")
+        utils.extract_longest(graph_out_pref + "_DBS" + ".fa", graph_out_pref + "_DBS" + "_longest.fa")
     if mode == 2:
         #locate all homopolymer regions
         print("Running mode: only sampling")
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     if mode == 3:
         print("Running mode: both search module")
         print("Running DBS of beadm width: ", BeamWidth)
-        DBS.Grouped_beam(nx_pack[0], BeamWidth, graph_out_pref + "_DBS_" + str(BeamWidth) + ".fa")
+        DBS.Grouped_beam(nx_pack[0], BeamWidth, graph_out_pref + "_DBS" + ".fa")
     
         print("Scaning homopolymer regions...")
         utils.nx_homo(nx_pack[0], graph_out_pref + "_homo_loc.csv")
@@ -72,6 +72,7 @@ if __name__ == '__main__':
         BS.sample(nx_pack[0], graph_out_pref, graph_out_pref + "_sampling.fa")
         # merge the output of two modules and filter out short ones for intermediate output(mainly from DBS).
         #utils.merge_filter(graph_out_pref + "_DBS_" + str(BeamWidth) + ".fa", graph_out_pref + "_sampling.fa", graph_out_pref + "_filtered.fa")
-        utils.merge_filter(graph_out_pref + "_DBS_" + str(BeamWidth) + ".fa", graph_out_pref + "_sampling.fa", graph_out_pref + "_merge.fa")
+        utils.merge_filter(graph_out_pref + "_DBS" + ".fa", graph_out_pref + "_sampling.fa", graph_out_pref + "_merge.fa")
+        utils.extract_longest(graph_out_pref + "_merge" + ".fa", graph_out_pref + "_merge" + "_longest.fa")
     
     
