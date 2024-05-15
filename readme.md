@@ -45,6 +45,12 @@ Backbone sequence file for graph construction (in fasta format).
 --beamwidth | <int, e.g. 100>
 Beamwidth for diverse beam search (default: 500).
 
+-p | <str, e.g. accuvir>
+Preifx (default: accuvir).
+
+-o | <str, e.g., result>
+Output folder (default: result).
+
 -h | Print the usage information. 
 ```
 
