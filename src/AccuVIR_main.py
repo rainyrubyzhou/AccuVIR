@@ -23,6 +23,8 @@ if __name__ == '__main__':
                                                                                                     '3' for both search module. \
                                                                ('1' is recommended for first round search.)")
     parser.add_argument('--beamwidth', type=int, default = 500,  required=False, help = "Beamwidth for diverse beam search (default: 500).")
+    parser.add_argument('-p', type=str, default = 'accuvir',  required=False, help = "prefix (default: accuvir)")
+    parser.add_argument('-o', type=str, default = 'result',  required=False, help = "output folder: result")
     
     args = parser.parse_args()
 
@@ -30,10 +32,8 @@ if __name__ == '__main__':
     ec_reads = args.r
     backbone = args.b
     mode = int(args.m)
-    BeamWidth = args.beamwidth    
-    
-    graph_out_pref = (ec_reads + "_ON_" +\
-                     (os.path.splitext(os.path.basename(backbone))[0]) )
+    BeamWidth = args.beamwidth
+    graph_out_pref = f"{args.o}/{args.p}"
     time1 = time.time()
     aln_graph = utils.construct_aln_graph_from_fasta(ec_reads,  backbone, 5000)
     time2 = time.time()
