@@ -29,8 +29,11 @@ An example can be found in Data availability.
 ### Step 1: Paths generation using two modules.
 This step has two substeps:
 First, find a path with the longest length using DBS (-m 1).
+
 Second, use the path in the first substep as the backbone sequence and generate a set of paths using two modules (-m 3).
-Both two substeps are using the following command.
+
+Both substeps use the following command.
+
 
 >**Command Usage:**
 ```console
