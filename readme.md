@@ -99,7 +99,7 @@ Users can test our tool using the test data [here](https://drive.google.com/driv
 ```console
 python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p test -o result -m 1
 
-python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p test -o result -m 3
+python AccuVIR_main.py -r test_reads.fa -b test_DBS_longest.fa -p test -o result -m 3
 
 gmhmmp -m heu_11.mod -f G -o result/test_merge.fa.gtf result/test_merge.fa
 
