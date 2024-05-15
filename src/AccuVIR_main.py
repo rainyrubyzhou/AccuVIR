@@ -27,7 +27,7 @@ if __name__ == '__main__':
     parser.add_argument('-o', type=str, default = 'result',  required=False, help = "output folder: result")
     
     args = parser.parse_args()
-
+    os.system(f'mkdir -p {args.o}')
     print(args.r, args.b)
     ec_reads = args.r
     backbone = args.b
