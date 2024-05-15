@@ -106,7 +106,7 @@ python AccuVIR_MRR.py -r prefix_merge.fa
 ```
 >**Output Results:** 
 
- + `prefix_merge_final.fa` is final output of AccuVIR. It contains the single sequence that ranks best using MRR. 
+ + `prefix_merge.fa_final.fa` is final output of AccuVIR. It contains the single sequence that ranks best using MRR. 
 
     Users can also pass this sequence as the backbone to step 1 to iteratively refine the output. 
 
