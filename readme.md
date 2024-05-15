@@ -55,9 +55,9 @@ Output folder (default: result).
 ```
 
 >**Output Results:** 
-+ `X_ON_Y_filtered.fa` is the intermediate output before MRR. It contains multiple sequences from both DBS and path sampling modules.  
++ `prefix_merge.fa` is the intermediate output before MRR. It contains multiple sequences from both DBS and path sampling modules.  
 
-    `X` is the name of the reads file and `Y` is the backbone sequence. Outputs will be created in the input file directory. 
+    Outputs will be created in the input file directory. 
 
 ### Step 2: Apply gene prediction tool (Genemark recommended)
 
