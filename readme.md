@@ -111,7 +111,7 @@ python AccuVIR_MRR.py -r prefix_merge.fa
 
     Users can also pass this sequence as the backbone to step 1 to iteratively refine the output. 
 
-## Data availability
+## Data availability and Example
 Users can test our tool using the test data [here](https://drive.google.com/drive/folders/1iCNVjkw_LEhd8pYfS4QDXEAmVAHZW2N9). The test data is the error-corrected reads from Canu. `ref.fa` is the ground truth for this dataset. 
 ```console
 python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p test -o result -m 1
