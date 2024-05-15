@@ -90,14 +90,19 @@ python AccuVIR_MRR.py -r prefix_merge.fa
 ```
 >**Output Results:** 
 
- + `prefix_final_result.fa` is final output of AccuVIR. It contains the single sequence that ranks best using MRR. 
+ + `prefix_merge_final.fa` is final output of AccuVIR. It contains the single sequence that ranks best using MRR. 
 
     Users can also pass this sequence as the backbone to step 1 to iteratively refine the output. 
 
 ## Data availability
 Users can test our tool using the test data [here](https://drive.google.com/drive/folders/1iCNVjkw_LEhd8pYfS4QDXEAmVAHZW2N9). `ref.fa` is the ground truth for this dataset.
 ```console
-python AccuVIR_main.py -r test_reads.fa -b backbone.fa
+python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p test -o result
+
+gmhmmp -m heu_11.mod -f G -o result/test_merge.fa.gtf result/test_merge.fa
+
+python AccuVIR_MRR.py -r result/prefix_merge.fa
+
 ```
 
 
