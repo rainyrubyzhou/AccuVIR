@@ -34,7 +34,7 @@ python AccuVIR_main.py <args>
 
 >**Mandatory args:**
 ```console
--r | <str, e.g. "raw_HIV.fasta">
+-r | <str, e.g. "error_corrected_reads.fasta">
 Reads file for graph construction (in fasta format). 
 
 -b | <str, e.g. "canu_contig.fasta">
@@ -69,14 +69,14 @@ For online running, please
 
 For offline running, we use the version `GeneMark.hmm for prokaryotes`. Users need to 
 1. download `GeneMarkS` at [this page](http://exon.gatech.edu/GeneMark/license_download.cgi)
-2. download `gm_key` and put it at required directory
+2. download `gm_key` and put it at users home directory (cp gm_key ~/.gm_key)
 3. run Genemark using the command below
 >**Example usage of Genemark (GeneMark.hmm for prokaryotes in this example):**
 ```console
-gmhmmp -m heu_11.mod -f G -o X_ON_Y_filtered.fa.gtf X_ON_Y_filtered.fa
+gmhmmp -m heu_11.mod -f G -o prefix_merge.fa.gtf prefix_merge.fa
 ```
 
-`.gtf` output file is required for next step. (e.g. `X_ON_Y_filtered.fa.gtf`)
+`.gtf` output file is required for next step. (e.g. `prefix_merge.fa.gtf`)
 
 
 ### Step 3: Call ranking module for final output.
