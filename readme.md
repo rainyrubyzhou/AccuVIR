@@ -28,11 +28,12 @@ Successful installation will end with usage information using the above commands
 An example can be found in Data availability. 
 ### Step 1: Paths generation using two modules.
 This step has two substeps:
-First, find a path with the longest length using DBS (-m 1).
 
-Second, use the path in the first substep as the backbone sequence and generate a set of paths using two modules (-m 3).
++First, find a path with the longest length using DBS (-m 1).
 
-Both substeps use the following command.
++Second, use the path in the first substep as the backbone sequence and generate a set of paths using two modules (-m 3).
+
++Both substeps use the following command.
 
 
 >**Command Usage:**
