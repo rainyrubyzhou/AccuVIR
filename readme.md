@@ -57,6 +57,7 @@ Output folder (default: result).
 -h | Print the usage information. 
 ```
 >**Example Command:**
+
 We suggest using the following two substeps:
 
 - First, find a path with the longest length using DBS (-m 1). Then, rebuild the alignment graph by using it as the backbone. This step is to obtain a better-quality alignment graph.
