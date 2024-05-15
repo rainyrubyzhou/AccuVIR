@@ -27,15 +27,6 @@ Successful installation will end with usage information using the above commands
 ## Usage of the AccuVIR: 
 An example can be found in Data availability. 
 ### Step 1: Paths generation using two modules.
-This step has two substeps:
-
-- First, find a path with the longest length using DBS (-m 1).
-
-- Second, use the path in the first substep as the backbone sequence and generate a set of paths using two modules (-m 3).
-
-- Both substeps use the following command.
-
-
 >**Command Usage:**
 ```console
 python AccuVIR_main.py <args>
@@ -66,10 +57,16 @@ Output folder (default: result).
 -h | Print the usage information. 
 ```
 >**Example Command:**
-```console
-python AccuVIR_main.py -r test_reads.fa -b backbone.fa -p prefix -o output_folder -m 1
+We suggest using the following two substeps:
 
-python AccuVIR_main.py -r test_reads.fa -b prefix_DBS_longest.fa -p prefix -o output_folder -m 3
+- First, find a path with the longest length using DBS (-m 1). Then, rebuild the alignment graph by using it as the backbone. This step is to obtain a better-quality alignment graph.
+
+- Second, use the path in the first substep as the backbone sequence. Then, generate a set of paths using two searching modules (-m 3).
+
+```console
+python AccuVIR_main.py -r reads.fa -b backbone.fa -p prefix -o output_folder -m 1
+
+python AccuVIR_main.py -r reads.fa -b prefix_DBS_longest.fa -p prefix -o output_folder -m 3
 
 ```
 
